@@ -87,9 +87,9 @@
       <div class = "footer-links">
         <a href="#top" class="active">Home</a>
         <a href="#gallery">Gallery</a>
-        <a href="#index">Menu</a>
+        <a href="Menu.html">Menu</a>
         <a href="#about">About us</a>
-        <a href="#contact">Contact Us</a>
+        <a href="Contact.html">Contact Us</a>
     </div>
       <div class="footer-container-hours"> 
         <div class="italic-text">Mon : CLOSED </div>
@@ -101,18 +101,3 @@
   </footer>
 </body>
 </html>
-
-<script>
-  document.querySelector('.hamburger').addEventListener('click', function() {
-      this.classList.toggle('change');
-      document.querySelector('.nav-links').classList.toggle('active');
-  });
-  
-  // Close the menu when clicking on a link
-  document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', function() {
-          document.querySelector('.hamburger').classList.remove('change');
-          document.querySelector('.nav-links').classList.remove('active');
-      });
-  });
-</script>
