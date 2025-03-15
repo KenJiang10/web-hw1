@@ -3,9 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel ="stylesheet" href="index.css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel ="icon" type="image/png" href="pictures/pho60.png">
+    <link rel="html" href="Menu.html">
+    <link rel="html" href="Contact.html">
+    <title> Pho 60 | Homepage</title>
+
 </head>
 <body>
+  <nav class="navbar">
+    <input type="checkbox" id="hamburger-toggle" class="hamburger-toggle">
+    <label for="hamburger-toggle" class="hamburger">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </label>
+    <div class="nav-links">
+        <a href="#top" class="active">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="index.html">Menu</a>
+        <a href="#about">About us</a>
+        <a href="Contact.html">Contact Us</a>
+    </div>
+</nav>
     
+    <section class="hero">
+      <div class = "image-logo">
+        <img src="pictures/pho60.png" alt="Description of the image">
+      </div>
+        <h2 class = "title-text"> Welcome to Pho 60</h2>
+        <p class = "italic-text"> Order now and try out dishes!</p>
+        <a href="#" class="order-button">Online Order</a>
+    </section>
+
+  <section id="gallery">
+
+    <hr class="custom-line">
+    <div class="gallery-title">Gallery</div>
+    <div>
+      <div class="gallery-container">
+        <img src="pictures/outside.png" alt="restaurant image">
+        <img src="pictures/interior1.png" alt="restaurant image">
+        <img src="pictures/fancy.png" alt="restaurant image">
+        <img src="pictures/plating.png" alt="restaurant image">
+        <img src="pictures/food1.png" alt="restaurant image">
+        <img src="pictures/smalldishes.png" alt="restaurant image">
+      </div>
+  </section>
+    
+  <hr class="custom-line">
+    
+  <hr class="custom-line-thin">
+    <section id="about" class="about-container">
+      <div class="about-image">
+          <img src="pictures/restaurantpic.png" alt="restaurant image">
+      </div>
+      <div class="about-text">
+          <h2>About Us</h2>
+          <p>
+            Welcome to Pho 60, your authentic Vietnamese dining experience in the heart of Brooklyn. Our family-owned restaurant brings the rich flavors and traditional recipes of Vietnam straight to your table. From our signature pho, crafted with aromatic herbs and fresh ingredients, to savory banh mi sandwiches and crispy spring rolls, every dish is made with love and care. We take pride in serving our community with delicious, wholesome meals that capture the true essence of Vietnamese cuisine. Whether you’re here for a quick bite or a relaxing meal with friends, we strive to create a warm and welcoming atmosphere where every guest feels at home. Join us at Pho 60, where every meal tells a story of heritage and passion.
+          </p>
+          <p>
+            Whether you’re enjoying a casual meal with friends or gathering with loved ones, Pho 60 offers a warm, inviting atmosphere where we treat every guest like family. We believe in sharing the love of food, the joy of community, and the rich heritage that makes Vietnamese cuisine so special. Come for the food, stay for the experience, and let us take you on a culinary journey like no other.
+          </p>
+      </div>
+  </section>
+    
+  <footer>
+    <div class="row">
+      <p>Follow us on our socials</p>
+      <p class="end-text"> Business Hours</p>
+    </div>
+    <div class="footer-container-links">
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="pictures/fb.png" alt="Facebook link">
+      </a>
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="pictures/ig.png" alt="Instagram link">
+      </a>
+      <a href="https://youtu.be/xvFZjo5PgG0?si=szwLH651ct6A2AlN" target="_blank">
+        <img src="pictures/yt.png" alt="Youtube link">
+      </a>
+      <div class = "footer-links">
+        <a href="#top" class="active">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#index">Menu</a>
+        <a href="#about">About us</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+      <div class="footer-container-hours"> 
+        <div class="italic-text">Mon : CLOSED </div>
+        <div class="italic-text"> Tue-Fri: 9:30 AM - 9:30 PM </div>
+        <div class="italic-text"> Sat - 11:00 AM - 9:45 PM </div>
+        <div class="italic-text">Sun - 11:00 AM - 9:30 PM </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
+
+<script>
+  document.querySelector('.hamburger').addEventListener('click', function() {
+      this.classList.toggle('change');
+      document.querySelector('.nav-links').classList.toggle('active');
+  });
+  
+  // Close the menu when clicking on a link
+  document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', function() {
+          document.querySelector('.hamburger').classList.remove('change');
+          document.querySelector('.nav-links').classList.remove('active');
+      });
+  });
+</script>

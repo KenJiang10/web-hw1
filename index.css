@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.italic-text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.title-text {
+    font-family: Verdana, Geneva, Tahoma;
+    margin-bottom: 20px;
+}
+
+/* hamburger checkbox and nav */
+.hamburger-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #707263;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Nav bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: 
+        linear-gradient(rgba(119, 201, 12, 0.1),rgba(233, 225, 119, 0.4));
+    opacity: 0.7;
+    position: relative;
+    top: 0;
+    z-index: 1000; 
+}
+
+.image-logo img {
+    border: solid 3px orange;
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+    .image-logo img {
+        width: 100px !important;
+        height: auto !important;
+        border-width: 2px;
+        margin-bottom: 10px;
+    }
+}
+.nav-links {
+    display: flex;
+    gap: 50px;
+    position: sticky;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #707263;
+    font-size: 16px;
+    font-weight: bolder;
+    transition: color 0.3s;
+}
+
+.nav-links a.active {
+    color: #e67e22;
+    font-weight: bold;
+    font-size: 16px; 
+}
+
+.nav-links a:hover {
+    color: #e67e22;
+}
+
+/* mobile burger */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        z-index: 1001;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        flex-direction: column;
+        background: white;
+        width: 50%;
+        height: 100vh;
+        transition: 0.5s;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        overflow-y: auto; /*scroll*/
+        justify-content: flex-start;
+        padding-top: 20px;
+        gap: 0;
+    }
+    
+    .nav-links a {
+        border: 2px solid black;
+        font-size: 40px;
+        display: block;
+        text-align: center; 
+    }
+    
+    /* open menu when checked*/
+    .hamburger-toggle:checked ~ .nav-links {
+        right: 0;
+    }
+    
+    /* Hamburger animation */
+    .hamburger-toggle:checked ~ .hamburger .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+    }
+    
+    .hamburger-toggle:checked ~ .hamburger .bar2 {
+        opacity: 0;
+    }
+    
+    .hamburger-toggle:checked ~ .hamburger .bar3 {
+        transform: translate(0, -11px) rotate(45deg);
+    }
+    
+    .nav-links a {
+        margin: 20px 0;
+        font-size: 20px;
+    }
+}
+
+/* Hero Section */
+.hero {
+    height: 75vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(pictures/phohero.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 30px;
+}
+
+.hero h1 {
+    font-size: 72px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.order-button {
+    display: inline-block;
+    background-color: #e67e22;
+    color: white;
+    padding: 12px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.35s, padding 0.3s;
+    cursor: pointer;
+}
+
+.order-button:hover {
+    background-color: #d35400;
+    border: solid 2px orange;
+    padding: 12px 30px;
+    opacity: 0.95;
+}
+
+.order-button:active {
+    padding: 12px 30px;
+    opacity: 0.5;
+    box-shadow: 1 1 1 1;
+}
+
+.gallery-title {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 38px;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+section {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.gallery-container {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid rgba(255,255,255,0.684);
+    transition: all ease-in-out 0.8s;
+}
+
+.gallery-container img:hover {
+    box-shadow: 1px 5px 5px;
+    width: 200%;  
+    transform:scale(1.05); 
+}
+
+.custom-line {
+    border: 0;
+    border-top: 10px solid orange;
+    margin: 10px 0;
+}
+
+.custom-line-thin {
+    border: 0;
+    border-top: 3px solid #000;
+    margin-top: 100px
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+  
+.about-image {
+    flex: 1;
+    width: 50%;
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+}
+  
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    object-fit: cover;
+}
+  
+.about-text {
+    flex: 1;
+    width: 50%;  
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma;
+}
+  
+.about-text h2 {
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    font-family: 'Gill Sans';
+    text-align: center;
+}
+  
+.about-text p {
+    font-size: larger;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-family: 'Gill Sans';
+}
+  
+/* mobile about and gallery */
+@media (max-width: 750px) {
+    .about-container {
+        flex-direction: column;
+    }
+    
+    .about-image, .about-text {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .gallery-container {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+    
+    .gallery-container img {
+        height: 300px;
+        width: 80%;
+        object-fit: cover; 
+        margin: 10px 0; 
+        transition: width 0.3s ease, transform 0.3s ease; 
+    }
+    
+    .gallery-container img:hover {
+        width: 90%;  
+        transform:scale(1.05); 
+    }
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px 20px 20px;
+    font-size: larger;
+}
+
+.footer-container-links {
+    display: flex;
+    justify-content: center;
+    background: black;
+    padding: 10px;
+    flex-direction: row;
+}
+
+.footer-container-links img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    margin-bottom: 10px;
+    transform: scale(0.7);
+}
+
+.footer-container-hours {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 30px;
+}
+
+.end-text {
+    text-decoration: underline;
+    padding-right: 85px;
+    margin-left: auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    border: 2px solid white;
+    border-top: 10px solid white;
+    border-bottom: 10px solid white;
+    width: 50%; 
+    margin: 0 auto; 
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: lightgray;
+}
+
+@media (max-width: 768px) {
+    .footer-container-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-container-hours {
+        margin: 20px auto 0;
+        text-align: center;
+    }
+    
+    .footer-links {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 0;
+    }
+    
+    .row {
+        flex-direction: column;
+        text-align: center;
+        padding-left: 0;
+    }
+    
+    .end-text {
+        margin: 10px auto;
+        padding-right: 0;
+    }
+}
