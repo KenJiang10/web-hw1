@@ -36,6 +36,16 @@
     padding: 15px 20px;
     z-index: 999; /* ensures it stays on top */
 }
+
+@media (max-width: 600px) {
+  .button-link {
+    /* mobile styles go here */
+    top: 10px;
+    right: 10px;
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+}
 .menu-container {
     display: flex;
     justify-content: center;
