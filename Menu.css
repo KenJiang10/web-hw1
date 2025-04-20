@@ -37,7 +37,7 @@
     z-index: 999; /* ensures it stays on top */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 300px) {
   .button-link {
     /* mobile styles go here */
     top: 10px;
