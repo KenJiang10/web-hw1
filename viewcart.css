@@ -1,0 +1,126 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .cart-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .back-button {
+    display: block;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    text-decoration: none;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    width: fit-content;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .back-button:hover {
+    background-color: #ddd;
+  }
+  
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    background-color: #fdfdfd;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  
+  .cart-info {
+    flex: 1;
+  }
+  
+  .cart-info h4 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .cart-info p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #444;
+  }
+  
+  .remove-button {
+    background-color: #ff4d4f;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .remove-button:hover {
+    background-color: #e60000;
+  }
+  
+  .cart-summary {
+    text-align: right;
+    margin-top: 30px;
+    font-size: 20px;
+  }
+  
+  .cart-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: green;
+    color: white;
+  }
+  
+  .btn:hover {
+    background-color: orange;
+  }
+  
+  .btn-clear {
+    background-color: #6c757d;
+  }
+  
+  .btn-clear:hover {
+    background-color: #5a6268;
+  }
+  

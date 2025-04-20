@@ -20,6 +20,22 @@
     object-fit: cover;
     margin: 10px;   
 }
+.button-link {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 15px 20px;
+    z-index: 999; /* ensures it stays on top */
+}
 .menu-container {
     display: flex;
     justify-content: center;
@@ -49,7 +65,7 @@
     box-shadow: 4px 4px 10px gray;
     text-align: center;
     position: relative;
-    padding-bottom: 50px; 
+    padding-bottom: 80px;   
     font-size: large;
 }   
 
@@ -64,6 +80,7 @@
 }
 
 .menu-card p {
+    margin-bottom: 30px;
     padding-top: 10px;
     font-family: 'Gill Sans';
 }
@@ -71,9 +88,36 @@
 .price {
     font-weight: bold;
     color: darkgreen;
-    position: absolute;
     bottom: 20px;
     left: 0;
     right: 0;
     text-align: center;
+    position: absolute;
+
+}
+
+.order-button {
+    position: absolute;
+    bottom: 10px;
+    transform: translateX(-50%);
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover effect for the button */
+.order-button:hover {
+    background-color: darkorange;
+    transform: translateX(-50%) scale(1.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Active/clicked effect for the button */
+.order-button:active {
+    background-color: #cc7000;
+    transform: translateX(-50%) scale(0.95);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }

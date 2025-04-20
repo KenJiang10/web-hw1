@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="viewcart.css" />
+  <script src="viewcart.js" defer></script>
+</head>
+<body>
+  <div class="cart-container">
+    <h1>Your Cart</h1>
+    <a href="Menu.html" class="back-button">← Back to Menu</a>
+        
+    <div id="cart-items" class="cart-items"></div>
+
+    <div class="cart-summary">
+      <p>Total: <span id="total-price">$0.00</span></p>
+      <div class="cart-buttons">
+        <button id="checkout-button" class="btn">Checkout</button>
+        <button id="clear-cart-button" class="btn btn-clear">Clear Cart</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
